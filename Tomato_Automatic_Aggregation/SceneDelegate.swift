@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  Tomato_Automatic_Aggregation
 //
-//  Created by Terao Jumpei on 2021/06/02.
+//  Created by TeraJun on 2021/06/02.
 //
 
 import UIKit

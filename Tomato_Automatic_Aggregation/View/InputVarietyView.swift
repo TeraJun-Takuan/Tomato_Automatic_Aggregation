@@ -2,7 +2,7 @@
 //  GetDataFromBarcodereader.swift
 //  Wireless Test
 //
-//  Created by Terao Jumpei on 2021/05/26.
+//  Created by TeraJun on 2021/05/26.
 //
 
 import SwiftUI
@@ -21,7 +21,7 @@ struct InputVarietyView: View {
     @Binding var isPresented: Bool
     // 選択されているタブ
     @State var selectedTab = 1
-    
+
     var body: some View {
         NavigationView {
             TabView(selection: $selectedTab){

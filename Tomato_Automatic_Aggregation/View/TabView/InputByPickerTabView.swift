@@ -2,7 +2,7 @@
 //  InputByKeyboardTabView.swift
 //  自動集計
 //
-//  Created by Terao Jumpei on 2021/05/29.
+//  Created by TeraJun on 2021/05/29.
 //
 
 import SwiftUI

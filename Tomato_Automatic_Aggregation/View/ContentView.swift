@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  Wireless Test
 //
-//  Created by Terao Jumpei on 2021/05/12.
+//  Created by TeraJun on 2021/05/12.
 //
 
 import SwiftUI
@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var setData: ShareData
     @State var isShowInputView: Bool = false
-    
+
     var body: some View {
         VStack(){
             ZStack(){
@@ -28,7 +28,7 @@ struct ContentView: View {
                 Text("バーコードリーダーからデータ取得のテスト").font(.title).fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/).padding()
             }
             Spacer()
-            
+
 
             Text("バーコードで得たデータ：" + setData.varietyID).padding()
             Spacer()

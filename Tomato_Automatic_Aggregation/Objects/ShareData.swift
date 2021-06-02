@@ -2,7 +2,7 @@
 //  ShareData.swift
 //  Wireless Test
 //
-//  Created by Terao Jumpei on 2021/05/26.
+//  Created by TeraJun on 2021/05/26.
 //
 
 import Foundation

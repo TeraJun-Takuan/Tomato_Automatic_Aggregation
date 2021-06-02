@@ -2,7 +2,7 @@
 //  CustomTextField.swift
 //  Wireless Test
 //
-//  Created by Terao Jumpei on 2021/05/28.
+//  Created by TeraJun on 2021/05/28.
 //
 
 import SwiftUI
