@@ -9,21 +9,35 @@
 /* Begin PBXBuildFile section */
 		2CB963F6266742A3002509FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB963F5266742A3002509FC /* AppDelegate.swift */; };
 		2CB963F8266742A3002509FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB963F7266742A3002509FC /* SceneDelegate.swift */; };
-		2CB963FA266742A3002509FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB963F9266742A3002509FC /* ContentView.swift */; };
 		2CB963FC266742A5002509FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CB963FB266742A5002509FC /* Assets.xcassets */; };
 		2CB963FF266742A5002509FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CB963FE266742A5002509FC /* Preview Assets.xcassets */; };
 		2CB96402266742A5002509FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CB96400266742A5002509FC /* LaunchScreen.storyboard */; };
+		2CB9641426675BD8002509FC /* varieties.json in Resources */ = {isa = PBXBuildFile; fileRef = 2CB9640A26675BD8002509FC /* varieties.json */; };
+		2CB9641526675BD8002509FC /* InputVarietyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9640C26675BD8002509FC /* InputVarietyView.swift */; };
+		2CB9641626675BD8002509FC /* InputByPickerTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9640D26675BD8002509FC /* InputByPickerTabView.swift */; };
+		2CB9641726675BD8002509FC /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9640E26675BD8002509FC /* CustomTextField.swift */; };
+		2CB9641826675BD8002509FC /* InputByBarcodeReaderTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9640F26675BD8002509FC /* InputByBarcodeReaderTabView.swift */; };
+		2CB9641926675BD8002509FC /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9641026675BD8002509FC /* LoadingIndicatorView.swift */; };
+		2CB9641A26675BD8002509FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9641126675BD8002509FC /* ContentView.swift */; };
+		2CB9641B26675BD8002509FC /* ShareData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9641326675BD8002509FC /* ShareData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2CB963F2266742A3002509FC /* Tomato_Automatic_Aggregation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tomato_Automatic_Aggregation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB963F5266742A3002509FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CB963F7266742A3002509FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2CB963F9266742A3002509FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2CB963FB266742A5002509FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CB963FE266742A5002509FC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2CB96401266742A5002509FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2CB96403266742A5002509FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CB9640A26675BD8002509FC /* varieties.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = varieties.json; sourceTree = "<group>"; };
+		2CB9640C26675BD8002509FC /* InputVarietyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputVarietyView.swift; sourceTree = "<group>"; };
+		2CB9640D26675BD8002509FC /* InputByPickerTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputByPickerTabView.swift; sourceTree = "<group>"; };
+		2CB9640E26675BD8002509FC /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		2CB9640F26675BD8002509FC /* InputByBarcodeReaderTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputByBarcodeReaderTabView.swift; sourceTree = "<group>"; };
+		2CB9641026675BD8002509FC /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
+		2CB9641126675BD8002509FC /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2CB9641326675BD8002509FC /* ShareData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +70,11 @@
 		2CB963F4266742A3002509FC /* Tomato_Automatic_Aggregation */ = {
 			isa = PBXGroup;
 			children = (
+				2CB9640926675BD8002509FC /* data */,
+				2CB9641226675BD8002509FC /* Objects */,
+				2CB9640B26675BD8002509FC /* View */,
 				2CB963F5266742A3002509FC /* AppDelegate.swift */,
 				2CB963F7266742A3002509FC /* SceneDelegate.swift */,
-				2CB963F9266742A3002509FC /* ContentView.swift */,
 				2CB963FB266742A5002509FC /* Assets.xcassets */,
 				2CB96400266742A5002509FC /* LaunchScreen.storyboard */,
 				2CB96403266742A5002509FC /* Info.plist */,
@@ -73,6 +89,35 @@
 				2CB963FE266742A5002509FC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2CB9640926675BD8002509FC /* data */ = {
+			isa = PBXGroup;
+			children = (
+				2CB9640A26675BD8002509FC /* varieties.json */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		2CB9640B26675BD8002509FC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2CB9640C26675BD8002509FC /* InputVarietyView.swift */,
+				2CB9640D26675BD8002509FC /* InputByPickerTabView.swift */,
+				2CB9640E26675BD8002509FC /* CustomTextField.swift */,
+				2CB9640F26675BD8002509FC /* InputByBarcodeReaderTabView.swift */,
+				2CB9641026675BD8002509FC /* LoadingIndicatorView.swift */,
+				2CB9641126675BD8002509FC /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2CB9641226675BD8002509FC /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				2CB9641326675BD8002509FC /* ShareData.swift */,
+			);
+			path = Objects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,6 +179,7 @@
 			files = (
 				2CB96402266742A5002509FC /* LaunchScreen.storyboard in Resources */,
 				2CB963FF266742A5002509FC /* Preview Assets.xcassets in Resources */,
+				2CB9641426675BD8002509FC /* varieties.json in Resources */,
 				2CB963FC266742A5002509FC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,9 +191,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CB9641626675BD8002509FC /* InputByPickerTabView.swift in Sources */,
+				2CB9641526675BD8002509FC /* InputVarietyView.swift in Sources */,
+				2CB9641A26675BD8002509FC /* ContentView.swift in Sources */,
+				2CB9641826675BD8002509FC /* InputByBarcodeReaderTabView.swift in Sources */,
 				2CB963F6266742A3002509FC /* AppDelegate.swift in Sources */,
+				2CB9641B26675BD8002509FC /* ShareData.swift in Sources */,
+				2CB9641926675BD8002509FC /* LoadingIndicatorView.swift in Sources */,
 				2CB963F8266742A3002509FC /* SceneDelegate.swift in Sources */,
-				2CB963FA266742A3002509FC /* ContentView.swift in Sources */,
+				2CB9641726675BD8002509FC /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
