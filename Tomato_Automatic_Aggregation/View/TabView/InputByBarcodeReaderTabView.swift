@@ -63,5 +63,6 @@ struct InputByBarcodeReaderTabView: View {
 struct InputByBarcodeReaderTabView_Previews: PreviewProvider {
     static var previews: some View {
         InputByBarcodeReaderTabView(isPresented: Binding.constant(false))
+            .environmentObject(ShareData())
     }
 }
