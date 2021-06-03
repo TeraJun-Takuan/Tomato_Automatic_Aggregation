@@ -16,7 +16,7 @@ struct InputByBarcodeReaderTabView: View {
     // バーコードリーダー入力待ちかどうか
     @State var isBarcodeReaderEditing: Bool = false
     // 共有オブジェクト
-    @EnvironmentObject var setData: ShareData
+    @EnvironmentObject var InputData: ShareData
 
     var body: some View {
         ZStack{
@@ -27,12 +27,12 @@ struct InputByBarcodeReaderTabView: View {
             VStack{
                 HStack{
                     Text("品種ID:")
-                    CustomTextField(text: $setData.varietyID, isFirstResponder: true)
+                    CustomTextField(text: $InputData.varietyID, isFirstResponder: true)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .frame(height:30)
-                        .onReceive(Just($setData.varietyID), perform: { _ in
-                            if maxTextlength < setData.varietyID.count {
-                                setData.varietyID = String(setData.varietyID.suffix(1))
+                        .onReceive(Just($InputData.varietyID), perform: { _ in
+                            if maxTextlength < InputData.varietyID.count {
+                                InputData.varietyID = String(InputData.varietyID.suffix(1))
                             }
                         })
                     Spacer()
@@ -44,10 +44,10 @@ struct InputByBarcodeReaderTabView: View {
                     isBarcodeReaderEditing = false
                 }
                 .padding()
-                if setData.varietyID.isEmpty{
+                if InputData.varietyID.isEmpty{
                     Text("")
                         .frame(height:0)
-                } else if CalculateCheckDigit.isErrorInBarcode(setData.varietyID) {
+                } else if CalculateCheckDigit.isErrorInBarcode(InputData.varietyID) {
                     Text("入力値が不適切です")
                         .foregroundColor(.red)
                 } else {
