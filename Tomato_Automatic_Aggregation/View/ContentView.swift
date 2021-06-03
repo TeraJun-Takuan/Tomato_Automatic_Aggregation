@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var setData: ShareData
+    @EnvironmentObject var InputData: Variety
     @State var isShowInputView: Bool = false
 
     var body: some View {
@@ -22,7 +22,7 @@ struct ContentView: View {
                     .padding()
                     .sheet(isPresented: $isShowInputView){
                         InputVarietyView(isPresented: self.$isShowInputView)
-                            .environmentObject(setData)
+                            .environmentObject(InputData)
                     }
                 }
                 Text("バーコードリーダーからデータ取得のテスト").font(.title).fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/).padding()
@@ -30,7 +30,7 @@ struct ContentView: View {
             Spacer()
 
 
-            Text("バーコードで得たデータ：" + setData.InputVarietyID).padding()
+            Text("バーコードで得たデータ：" + InputData.InputVarietyID).padding()
             Spacer()
         }
     }
@@ -38,6 +38,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environmentObject(ShareData())
+        ContentView().environmentObject(Variety())
     }
 }

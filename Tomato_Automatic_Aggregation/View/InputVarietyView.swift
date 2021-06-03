@@ -16,7 +16,7 @@ extension UIApplication {
 
 struct InputVarietyView: View {
     // 共有オブジェクト
-    @EnvironmentObject var setData: ShareData
+    @EnvironmentObject var setData: Variety
     // シートが開いている状態
     @Binding var isPresented: Bool
     // 選択されているタブ
@@ -51,6 +51,6 @@ struct InputVarietyView: View {
 
 struct GetDataFromBarcodereader_Previews: PreviewProvider {
     static var previews: some View {
-        InputVarietyView(isPresented: Binding.constant(false)).environmentObject(ShareData())
+        InputVarietyView(isPresented: Binding.constant(false)).environmentObject(Variety())
     }
 }

@@ -16,7 +16,7 @@ struct InputByBarcodeReaderTabView: View {
     // バーコードリーダー入力待ちかどうか
     @State var isBarcodeReaderEditing: Bool = false
     // 共有オブジェクト
-    @EnvironmentObject var InputData: ShareData
+    @EnvironmentObject var InputData: Variety
 
     var body: some View {
         ZStack{
@@ -63,6 +63,6 @@ struct InputByBarcodeReaderTabView: View {
 struct InputByBarcodeReaderTabView_Previews: PreviewProvider {
     static var previews: some View {
         InputByBarcodeReaderTabView(isPresented: Binding.constant(false))
-            .environmentObject(ShareData())
+            .environmentObject(Variety())
     }
 }
