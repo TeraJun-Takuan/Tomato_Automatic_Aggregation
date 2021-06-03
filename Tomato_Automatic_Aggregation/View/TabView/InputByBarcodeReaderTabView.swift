@@ -27,12 +27,12 @@ struct InputByBarcodeReaderTabView: View {
             VStack{
                 HStack{
                     Text("品種ID:")
-                    CustomTextField(text: $InputData.varietyID, isFirstResponder: true)
+                    CustomTextField(text: $InputData.InputVarietyID, isFirstResponder: true)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .frame(height:30)
-                        .onReceive(Just($InputData.varietyID), perform: { _ in
-                            if maxTextlength < InputData.varietyID.count {
-                                InputData.varietyID = String(InputData.varietyID.suffix(1))
+                        .onReceive(Just($InputData.InputVarietyID), perform: { _ in
+                            if maxTextlength < InputData.InputVarietyID.count {
+                                InputData.InputVarietyID = String(InputData.InputVarietyID.suffix(1))
                             }
                         })
                     Spacer()
@@ -44,10 +44,10 @@ struct InputByBarcodeReaderTabView: View {
                     isBarcodeReaderEditing = false
                 }
                 .padding()
-                if InputData.varietyID.isEmpty{
+                if InputData.InputVarietyID.isEmpty{
                     Text("")
                         .frame(height:0)
-                } else if CalculateCheckDigit.isErrorInBarcode(InputData.varietyID) {
+                } else if CalculateCheckDigit.isErrorInBarcode(InputData.InputVarietyID) {
                     Text("入力値が不適切です")
                         .foregroundColor(.red)
                 } else {

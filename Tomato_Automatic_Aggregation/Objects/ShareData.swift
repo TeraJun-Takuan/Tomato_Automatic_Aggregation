@@ -8,7 +8,7 @@
 import Foundation
 
 class ShareData: ObservableObject {
-    @Published var varietyID: String = ""
-    @Published var varietyName: String = ""
+    @Published var InputVarietyID: String = ""
+    @Published var InputVarietyName: String = ""
     @Published var isUsingBarcodeReader: Bool = true
 }

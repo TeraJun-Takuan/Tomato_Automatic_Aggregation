@@ -30,7 +30,7 @@ struct ContentView: View {
             Spacer()
 
 
-            Text("バーコードで得たデータ：" + setData.varietyID).padding()
+            Text("バーコードで得たデータ：" + setData.InputVarietyID).padding()
             Spacer()
         }
     }
