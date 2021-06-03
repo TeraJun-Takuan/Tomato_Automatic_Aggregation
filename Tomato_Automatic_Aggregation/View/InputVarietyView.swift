@@ -1,6 +1,6 @@
 //
 //  GetDataFromBarcodereader.swift
-//  Wireless Test
+//  Tomato_Automatic_Aggregation
 //
 //  Created by TeraJun on 2021/05/26.
 //

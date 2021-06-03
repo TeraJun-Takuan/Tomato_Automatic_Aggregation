@@ -1,6 +1,6 @@
 //
 //  InputByBarcodeReaderView.swift
-//  自動集計
+//  Tomato_Automatic_Aggregation
 //
 //  Created by TeraJun on 2021/05/29.
 //
