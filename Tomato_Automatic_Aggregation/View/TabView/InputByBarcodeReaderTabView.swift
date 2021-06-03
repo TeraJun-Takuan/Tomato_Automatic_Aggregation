@@ -44,6 +44,15 @@ struct InputByBarcodeReaderTabView: View {
                     isBarcodeReaderEditing = false
                 }
                 .padding()
+                if setData.varietyID.isEmpty{
+                    Text("")
+                        .frame(height:0)
+                } else if CalculateCheckDigit.isErrorInBarcode(setData.varietyID) {
+                    Text("入力値が不適切です")
+                        .foregroundColor(.red)
+                } else {
+                    Text("").frame(height:0)
+                }
 
                 Text("ソフトウェアキーボード:")+Text("\(isBarcodeReaderEditing ? "true" : "false")")
             }
@@ -54,6 +63,5 @@ struct InputByBarcodeReaderTabView: View {
 struct InputByBarcodeReaderTabView_Previews: PreviewProvider {
     static var previews: some View {
         InputByBarcodeReaderTabView(isPresented: Binding.constant(false))
-            .environmentObject(ShareData())
     }
 }
