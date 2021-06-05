@@ -25,12 +25,13 @@ struct ContentView: View {
                             .environmentObject(InputData)
                     }
                 }
-                Text("バーコードリーダーからデータ取得のテスト").font(.title).fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/).padding()
+                Text("ミニトマト自動集計").font(.title).fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/).padding()
             }
             Spacer()
 
 
-            Text("バーコードで得たデータ：" + InputData.InputVarietyID).padding()
+            Text("品種ID：" + InputData.InputVarietyID).padding([.top, .leading, .trailing])
+            Text("品種名：" + InputData.InputVarietyName).padding([.leading, .bottom, .trailing])
             Spacer()
         }
     }
