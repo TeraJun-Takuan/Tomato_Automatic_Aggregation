@@ -11,8 +11,6 @@ import Combine
 struct InputByBarcodeReaderTabView: View {
     // テキストの最大入力文字数
     private let maxTextlength: Int = 14
-    // シートが開いている状態
-    @Binding var isPresented: Bool
     // バーコードリーダー入力待ちかどうか
     @State var isBarcodeReaderEditing: Bool = false
     // 共有オブジェクト
@@ -62,7 +60,7 @@ struct InputByBarcodeReaderTabView: View {
 
 struct InputByBarcodeReaderTabView_Previews: PreviewProvider {
     static var previews: some View {
-        InputByBarcodeReaderTabView(isPresented: Binding.constant(false))
+        InputByBarcodeReaderTabView()
             .environmentObject(Variety())
     }
 }

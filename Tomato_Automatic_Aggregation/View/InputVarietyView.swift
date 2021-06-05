@@ -25,12 +25,12 @@ struct InputVarietyView: View {
     var body: some View {
         NavigationView {
             TabView(selection: $selectedTab){
-                InputByBarcodeReaderTabView(isPresented: $isPresented)
+                InputByBarcodeReaderTabView()
                     .tabItem {
                         Text("バーコードリーダーで入力")
                     }
                     .tag(1)
-                InputByPickerTabView()
+                InputByListTabView()
                     .tabItem {
                         Text("一覧から入力")
                     }
