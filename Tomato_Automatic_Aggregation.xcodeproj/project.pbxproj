@@ -18,7 +18,7 @@
 		2CB9641926675BD8002509FC /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9641026675BD8002509FC /* LoadingIndicatorView.swift */; };
 		2CB9641A26675BD8002509FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9641126675BD8002509FC /* ContentView.swift */; };
 		2CB9641B26675BD8002509FC /* Variety.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9641326675BD8002509FC /* Variety.swift */; };
-		2CB9641F26675D9E002509FC /* InputByPickerTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9641D26675D9E002509FC /* InputByPickerTabView.swift */; };
+		2CB9641F26675D9E002509FC /* InputByListTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9641D26675D9E002509FC /* InputByListTabView.swift */; };
 		2CB9642026675D9E002509FC /* InputByBarcodeReaderTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9641E26675D9E002509FC /* InputByBarcodeReaderTabView.swift */; };
 		2CB9642326686ABD002509FC /* CalculateCheckDigit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9642226686ABD002509FC /* CalculateCheckDigit.swift */; };
 		2CF767222668A3FF008096B0 /* GetVarietyDataFromJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF767212668A3FF008096B0 /* GetVarietyDataFromJSON.swift */; };
@@ -38,7 +38,7 @@
 		2CB9641026675BD8002509FC /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
 		2CB9641126675BD8002509FC /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2CB9641326675BD8002509FC /* Variety.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Variety.swift; sourceTree = "<group>"; };
-		2CB9641D26675D9E002509FC /* InputByPickerTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputByPickerTabView.swift; sourceTree = "<group>"; };
+		2CB9641D26675D9E002509FC /* InputByListTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputByListTabView.swift; sourceTree = "<group>"; };
 		2CB9641E26675D9E002509FC /* InputByBarcodeReaderTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputByBarcodeReaderTabView.swift; sourceTree = "<group>"; };
 		2CB9642226686ABD002509FC /* CalculateCheckDigit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateCheckDigit.swift; sourceTree = "<group>"; };
 		2CF767212668A3FF008096B0 /* GetVarietyDataFromJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetVarietyDataFromJSON.swift; sourceTree = "<group>"; };
@@ -127,7 +127,7 @@
 		2CB9641C26675D9E002509FC /* TabView */ = {
 			isa = PBXGroup;
 			children = (
-				2CB9641D26675D9E002509FC /* InputByPickerTabView.swift */,
+				2CB9641D26675D9E002509FC /* InputByListTabView.swift */,
 				2CB9641E26675D9E002509FC /* InputByBarcodeReaderTabView.swift */,
 			);
 			path = TabView;
@@ -213,7 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CB9641F26675D9E002509FC /* InputByPickerTabView.swift in Sources */,
+				2CB9641F26675D9E002509FC /* InputByListTabView.swift in Sources */,
 				2CB9641526675BD8002509FC /* InputVarietyView.swift in Sources */,
 				2CB9642026675D9E002509FC /* InputByBarcodeReaderTabView.swift in Sources */,
 				2CB9641A26675BD8002509FC /* ContentView.swift in Sources */,
