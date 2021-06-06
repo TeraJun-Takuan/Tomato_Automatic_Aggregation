@@ -11,10 +11,12 @@ import Combine
 struct InputByBarcodeReaderTabView: View {
     // テキストの最大入力文字数
     private let maxTextlength: Int = 14
+    // バーコードリーダーからの読み取りデータを格納
+    @State var InputByBarcodeReader: String = ""
     // バーコードリーダー入力待ちかどうか
     @State var isBarcodeReaderEditing: Bool = false
-    // 共有オブジェクト
-    @EnvironmentObject var InputData: Variety
+    // 入力値が適切かどうか
+    @State var isInputDataAppropriate: Bool = false
 
     var body: some View {
         ZStack{
@@ -25,12 +27,17 @@ struct InputByBarcodeReaderTabView: View {
             VStack{
                 HStack{
                     Text("品種ID:")
-                    CustomTextField(text: $InputData.InputVarietyID, isFirstResponder: true)
+                    CustomTextField(text: $InputByBarcodeReader, isFirstResponder: true)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .frame(height:30)
-                        .onReceive(Just($InputData.InputVarietyID), perform: { _ in
-                            if maxTextlength < InputData.InputVarietyID.count {
-                                InputData.InputVarietyID = String(InputData.InputVarietyID.suffix(1))
+                        .onReceive(Just($InputByBarcodeReader), perform: { _ in
+                            if maxTextlength < InputByBarcodeReader.count {
+                                InputByBarcodeReader = String(InputByBarcodeReader.suffix(1))
+                            }
+                            if CalculateCheckDigit.isErrorInBarcode(InputByBarcodeReader) {
+                                isInputDataAppropriate = false
+                            } else {
+                                isInputDataAppropriate = true
                             }
                         })
                     Spacer()
@@ -42,10 +49,10 @@ struct InputByBarcodeReaderTabView: View {
                     isBarcodeReaderEditing = false
                 }
                 .padding()
-                if InputData.InputVarietyID.isEmpty{
+                if InputByBarcodeReader.isEmpty{
                     Text("")
                         .frame(height:0)
-                } else if CalculateCheckDigit.isErrorInBarcode(InputData.InputVarietyID) {
+                } else if CalculateCheckDigit.isErrorInBarcode(InputByBarcodeReader) {
                     Text("入力値が不適切です")
                         .foregroundColor(.red)
                 } else {
@@ -54,6 +61,12 @@ struct InputByBarcodeReaderTabView: View {
 
                 Text("ソフトウェアキーボード:")+Text("\(isBarcodeReaderEditing ? "true" : "false")")
             }
+            .onDisappear {
+                if isInputDataAppropriate{
+                    EnterInputData.EnterData(ID: String(InputByBarcodeReader.dropLast(1)))
+                }
+                
+            }
         }
     }
 }
@@ -61,6 +74,5 @@ struct InputByBarcodeReaderTabView: View {
 struct InputByBarcodeReaderTabView_Previews: PreviewProvider {
     static var previews: some View {
         InputByBarcodeReaderTabView()
-            .environmentObject(Variety())
     }
 }
