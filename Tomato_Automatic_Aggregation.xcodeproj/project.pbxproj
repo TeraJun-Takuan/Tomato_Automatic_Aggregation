@@ -21,7 +21,9 @@
 		2CB9641F26675D9E002509FC /* InputByListTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9641D26675D9E002509FC /* InputByListTabView.swift */; };
 		2CB9642026675D9E002509FC /* InputByBarcodeReaderTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9641E26675D9E002509FC /* InputByBarcodeReaderTabView.swift */; };
 		2CB9642326686ABD002509FC /* CalculateCheckDigit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9642226686ABD002509FC /* CalculateCheckDigit.swift */; };
+		2CD6F70E266CACC80034B1CD /* Reloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6F70D266CACC80034B1CD /* Reloader.swift */; };
 		2CF767222668A3FF008096B0 /* GetVarietyDataFromJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF767212668A3FF008096B0 /* GetVarietyDataFromJSON.swift */; };
+		2CF76724266BA890008096B0 /* EnterInputData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF76723266BA890008096B0 /* EnterInputData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +43,9 @@
 		2CB9641D26675D9E002509FC /* InputByListTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputByListTabView.swift; sourceTree = "<group>"; };
 		2CB9641E26675D9E002509FC /* InputByBarcodeReaderTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputByBarcodeReaderTabView.swift; sourceTree = "<group>"; };
 		2CB9642226686ABD002509FC /* CalculateCheckDigit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateCheckDigit.swift; sourceTree = "<group>"; };
+		2CD6F70D266CACC80034B1CD /* Reloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reloader.swift; sourceTree = "<group>"; };
 		2CF767212668A3FF008096B0 /* GetVarietyDataFromJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetVarietyDataFromJSON.swift; sourceTree = "<group>"; };
+		2CF76723266BA890008096B0 /* EnterInputData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterInputData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,8 @@
 			children = (
 				2CB9642226686ABD002509FC /* CalculateCheckDigit.swift */,
 				2CF767212668A3FF008096B0 /* GetVarietyDataFromJSON.swift */,
+				2CF76723266BA890008096B0 /* EnterInputData.swift */,
+				2CD6F70D266CACC80034B1CD /* Reloader.swift */,
 			);
 			path = methods;
 			sourceTree = "<group>";
@@ -220,10 +226,12 @@
 				2CB963F6266742A3002509FC /* AppDelegate.swift in Sources */,
 				2CF767222668A3FF008096B0 /* GetVarietyDataFromJSON.swift in Sources */,
 				2CB9641B26675BD8002509FC /* Variety.swift in Sources */,
+				2CF76724266BA890008096B0 /* EnterInputData.swift in Sources */,
 				2CB9641926675BD8002509FC /* LoadingIndicatorView.swift in Sources */,
 				2CB963F8266742A3002509FC /* SceneDelegate.swift in Sources */,
 				2CB9641726675BD8002509FC /* CustomTextField.swift in Sources */,
 				2CB9642326686ABD002509FC /* CalculateCheckDigit.swift in Sources */,
+				2CD6F70E266CACC80034B1CD /* Reloader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
