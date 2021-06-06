@@ -8,7 +8,7 @@
 import Foundation
 
 class Variety: ObservableObject {
-    @Published var InputVarietyID: String = ""
-    @Published var InputVarietyName: String = ""
+    static var InputVarietyID: String = ""
+    static var InputVarietyName: String = ""
 }
 
