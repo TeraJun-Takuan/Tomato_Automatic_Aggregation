@@ -11,8 +11,6 @@ import Combine
 
 
 struct InputByListTabView: View {
-    // 共有オブジェクト
-    @EnvironmentObject var InputData: Variety
     // Pickerで選択された品種
     @State var selectedVariety: Int? = nil
     // 品種IDと品種名の関連付け
@@ -21,18 +19,18 @@ struct InputByListTabView: View {
         var name: String
     }
     let Varieties: [VarietiesDataBase] = Bundle.main.decodeJSON("varieties.json")
+    
     var body: some View {
         VStack{
-            GroupBox(label: Text("選択された品種：\(InputData.InputVarietyName)")) {
+            GroupBox(label: Text("一覧から品種を選択")) {
                 List(selection: $selectedVariety) {
                     ForEach(0..<Varieties.count) { num in
-                        Text("\(Varieties[num].id) \(Varieties[num].name)")
+                        Text("\(Varieties[num].name)")
                     }
                 }.environment(\.editMode, .constant(.active))
                 .onDisappear {
                     if (selectedVariety != nil) {
-                        InputData.InputVarietyID = Varieties[selectedVariety!].id
-                        InputData.InputVarietyName = Varieties[selectedVariety!].name
+                        EnterInputData.EnterData(Name: Varieties[selectedVariety!].name)
                     }
                 }
                 
@@ -44,6 +42,5 @@ struct InputByListTabView: View {
 struct InputByListTabView_Previews: PreviewProvider {
     static var previews: some View {
         InputByListTabView()
-            .environmentObject(Variety())
     }
 }
