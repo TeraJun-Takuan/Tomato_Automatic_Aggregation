@@ -8,37 +8,52 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var InputData: Variety
+    // Reloaderのインスタンス作成
+    @ObservedObject var reloader = Reloader()
+    // データ入力画面が表示されているか
     @State var isShowInputView: Bool = false
-
+    
     var body: some View {
         VStack(){
             ZStack(){
                 HStack(){
+                    Text("\(reloader.value)")
                     Spacer()
-                    Button("データ入力"){
-                        isShowInputView = true
+                    Button("\(isShowInputView ? "入力中" : "データ入力")"){
+                       isShowInputView = true
+                    }
+                    .sheet(isPresented: $isShowInputView){
+                       InputVarietyView(isPresented: self.$isShowInputView)
                     }
                     .padding()
-                    .sheet(isPresented: $isShowInputView){
-                        InputVarietyView(isPresented: self.$isShowInputView)
-                            .environmentObject(InputData)
-                    }
+                    
                 }
-                Text("ミニトマト自動集計").font(.title).fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/).padding()
+                Text("ミニトマト自動集計").font(.title).fontWeight(.bold).padding()
+                
             }
             Spacer()
-
-
-            Text("品種ID：" + InputData.InputVarietyID).padding([.top, .leading, .trailing])
-            Text("品種名：" + InputData.InputVarietyName).padding([.leading, .bottom, .trailing])
+           
+            VStack(){
+                HStack(){
+                    Text("品種ID：" + Variety.InputVarietyID)
+                    Spacer()
+                }
+                .frame(width: 250.0)
+                HStack(){
+                    Text("品種名：" + Variety.InputVarietyName)
+                    Spacer()
+                }.frame(width: 250.0)
+            }.padding()
             Spacer()
+        }
+        .onAppear {
+            reloader.start()
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environmentObject(Variety())
+        ContentView()
     }
 }
